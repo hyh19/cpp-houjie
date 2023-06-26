@@ -15,7 +15,7 @@ __doaml(complex *ths, const complex &r);
 
 class complex {
 public:
-    complex(double r = 0, double i = 0) : re(r), im(i) {}
+    explicit complex(double r = 0, double i = 0) : re(r), im(i) {}
 
     complex &operator+=(const complex &);
 
