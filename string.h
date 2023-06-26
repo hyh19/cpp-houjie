@@ -3,7 +3,7 @@
 
 class String {
 public:
-    String(const char *cstr = 0);
+    explicit String(const char *cstr = 0);
 
     String(const String &str);
 
