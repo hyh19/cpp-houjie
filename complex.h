@@ -12,7 +12,6 @@ __doami(complex *ths, const complex &r);
 complex &
 __doaml(complex *ths, const complex &r);
 
-
 class complex {
 public:
     explicit complex(double r = 0, double i = 0) : re(r), im(i) {}
@@ -22,8 +21,6 @@ public:
     complex &operator-=(const complex &);
 
     complex &operator*=(const complex &);
-
-    complex &operator/=(const complex &);
 
     double real() const { return re; }
 
@@ -178,6 +175,15 @@ operator!=(double x, const complex &y) {
     return x != real(y) || imag(y) != 0;
 }
 
+#include <iostream>
+
+using namespace std;
+
+ostream &
+operator<<(ostream &os, const complex &x) {
+    return os << '(' << real(x) << ',' << imag(x) << ')';
+}
+
 #include <cmath>
 
 inline complex
@@ -196,7 +202,3 @@ norm(const complex &x) {
 }
 
 #endif   //__MYCOMPLEX__
-
-
-
-

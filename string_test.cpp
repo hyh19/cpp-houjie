@@ -14,4 +14,6 @@ int main() {
     cout << s3 << endl;
     cout << s2 << endl;
     cout << s1 << endl;
+
+    return 0;
 }
